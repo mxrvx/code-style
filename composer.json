@@ -1,0 +1,32 @@
+{
+    "name": "mxrvx/code-style",
+    "type": "library",
+    "license": "MIT",
+    "description": "Code style and static analysis tools rulesets collection",
+    "authors": [
+        {
+            "name": "Vgrish",
+            "email": "vgrish@gmail.com"
+        }
+    ],
+    "prefer-stable": true,
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "MXRVX\\CodeStyle\\": "src/"
+        }
+    },
+    "require": {
+        "php": ">=8.0",
+        "friendsofphp/php-cs-fixer": "^3.75"
+    },
+    "require-dev": {
+        "vimeo/psalm": "^5.26"
+    },
+    "scripts": {
+        "cs:diff": "php-cs-fixer fix --dry-run -v --diff",
+        "cs:fix": "php-cs-fixer fix -v",
+        "psalm": "psalm",
+        "psalm:baseline": "psalm --set-baseline=psalm-baseline.xml"
+    }
+}
