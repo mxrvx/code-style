@@ -18,7 +18,9 @@ composer require --dev mxrvx/code-style
 Create a configuration file `.php-cs-fixer.dist.php` in the root of your project:
 
 ```php
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 require_once 'vendor/autoload.php';
 
